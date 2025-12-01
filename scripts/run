@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Compiles and runs a specific day's code
+
+if [ -z "$1" ] || [ -z "$2" ]; then
+  echo "Usage: scripts/run <day> <part>"
+  exit 1
+fi
+
+DAY=$(printf "%02d" "$1")
+PART=$2
+
+echo "Running that john 🙏..."
+echo "---------------"
+bun "day${DAY}/part${PART}.ts"
